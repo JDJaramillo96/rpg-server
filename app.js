@@ -10,6 +10,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var login = require('./routes/login');
 var team = require('./routes/team');
+var gold = require('./routes/gold');
+var character = require('./routes/character');
 
 var app = express();
 var port = process.env.ELEPHANTSQL_URL || 3000;
@@ -27,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/login', login);
 app.use('/team', team);
+app.use('/gold', gold);
+app.use('/character', character);
 
 //Catch 404
 app.use(function(request, response, next) {
