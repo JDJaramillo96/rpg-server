@@ -12,8 +12,11 @@ router.get('/:userName', function(request, response) {
 
   try {
     database.query(query, function(result) {
-      console.log(result[0]);
-      response.send(result[0]);
+      var responseJson = {
+        "userId": result[0].player_id,
+        "name": result[0].player_name
+      }
+      response.send(responseJson);
     });
 
   } catch (error) {

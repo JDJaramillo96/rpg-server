@@ -7,7 +7,7 @@ var config = {
   password: 'HWb1V4EOn0E9VOOslLczru0G3PZ9hylN', //env var: PGPASSWORD
   host: 'stampy.db.elephantsql.com', // Server hosting the postgres database
   port: 5432, //env var: PGPORT
-  max: 10,
+  max: 100,
   idleTimeoutMillis: 30000
 };
 
