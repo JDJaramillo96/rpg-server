@@ -4,7 +4,7 @@ var router = express.Router();
 
 //# RPG API
 router.get('/', function(request, response, next) {
-  response.render('index', { title: 'Car API!' });
+  response.render('index', { title: 'RPG API!' });
 });
 
 module.exports = router;

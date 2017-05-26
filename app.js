@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 //Modules
 var index = require('./routes/index');
 var login = require('./routes/login');
+var team = require('./routes/team');
 
 var app = express();
 var port = process.env.ELEPHANTSQL_URL || 3000;
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Routes
 app.use('/', index);
 app.use('/login', login);
+app.use('/team', team);
 
 //Catch 404
 app.use(function(request, response, next) {
