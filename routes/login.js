@@ -7,12 +7,13 @@ var database = require('./../database.js');
 //### Get User [GET]
 router.get('/:userName', function(request, response) {
   var userName = request.params.userName;
-  var query = 'SELECT "player_name" FROM "player" WHERE "player_name" IN (\'{0}\');';
+  var query = 'SELECT "player_name", "player_id" FROM "player" WHERE "player_name" IN (\'{0}\');';
   query = query.replace('{0}', userName);
 
   try {
     database.query(query, function(result) {
-      response.send(JSON.stringify(result));
+      console.log(result[0]);
+      response.send(result[0]);
     });
 
   } catch (error) {
