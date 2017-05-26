@@ -27,18 +27,18 @@ app.use('/', index);
 app.use('/login', login);
 
 //Catch 404
-app.use(function(req, res, next) {
-  var err = new err('Not Found');
-  err.status = 404;
-  next(err);
+app.use(function(request, response, next) {
+  var error = new error('Not Found');
+  error.status = 404;
+  next(error);
 });
 
-//err handler
-app.use(function(err, req, res, next) {
-  res.locals.message = err.message;
-  res.locals.err = req.app.get('env') === 'development' ? err : {};
-  res.status(err.status || 500);
-  res.render('err');
+//error handler
+app.use(function(error, request, response, next) {
+  response.locals.message = error.message;
+  response.locals.error = request.app.get('env') === 'development' ? error : {};
+  response.status(error.status || 500);
+  response.render('error');
 });
 
 //Exporting module
