@@ -1,0 +1,1 @@
+INSERT INTO playercharacter (player_id, character_id, health_points, attack_points, defense_points, sp_attack_points, sp_defense_points) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}') ON CONFLICT (player_id, character_id) DO NOTHING;

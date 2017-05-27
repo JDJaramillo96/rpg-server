@@ -1,0 +1,1 @@
+UPDATE team SET character_id_1 = {0}, character_id_2 = {1}, character_id_3 = {2} WHERE player_id IN ({3});
