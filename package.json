@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/damogi/rpg-host.git"
+    "url": "git+https://github.com:xoakzxz/rpg-host.git"
   },
   "keywords": [
     "rpg"
@@ -15,9 +15,8 @@
   "author": "xoakzxz",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/damogi/rpg-host/issues"
+    "url": "https://github.com/xoakzxz/rpg-host/issues"
   },
-  "homepage": "https://github.com/damogi/rpg-host#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
